@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const AddTaskBar = () => {
+const AddTaskBar = ({ addTask }) => {
+    const [inputValue, setInputValue] = useState('');
     return (
         <div>
-            <input type='text' />
-            <button>add</button>
+            <input type='text'
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+            />
+            <button onClick={() => {
+                addTask(inputValue);
+            }}>add</button>
         </div>
     )
 }
