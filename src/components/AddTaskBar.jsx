@@ -6,7 +6,7 @@ const AddTaskBar = ({ addTask }) => {
         if(inputValue == '')
             return;
         addTask(inputValue);
-        setInputValue = '';
+        setInputValue('');
     }
 
     return (
