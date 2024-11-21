@@ -6,8 +6,9 @@
 * delete Tasks
 * check Tasks
 * styling
+* tasks data persistance
 
 ## up coming features
 * drag Task to rearrange
-* tasks data persistance
+
 
