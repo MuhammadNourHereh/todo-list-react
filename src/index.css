@@ -1,7 +1,7 @@
 #root {
    display: flex;
    justify-content: center;
-   align-items: center;
+   min-height: 100vb;
    padding: 20px;
    background-color: lightblue;
 }
