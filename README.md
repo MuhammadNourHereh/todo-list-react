@@ -4,9 +4,9 @@
 ## features
 * add Tasks
 * delete Tasks
-
-## up coming features
-
-* delete Tasks
 * check Tasks
 * styling
+
+## up coming features
+* drag Task to rearrange
+
