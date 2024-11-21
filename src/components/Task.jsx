@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { TasksContext } from '../context/TasksContext'
 import './Task.css'
+import {TasksContext} from '../providers/TasksProvider'
 
 const Task = ({ children, index, checked }) => {
   const { delTask, setTasks, tasks } = useContext(TasksContext)

@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import Task from './Task'
-import { TasksContext } from '../context/TasksContext'
+import { TasksContext } from '../providers/TasksProvider'
 
 const TasksList = () => {
   const { tasks } = useContext(TasksContext)

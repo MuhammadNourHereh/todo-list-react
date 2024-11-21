@@ -19,15 +19,15 @@ const AddTaskBar = ({ addTask }) => {
 
     }
     return (
-        <div class="input-group mb-3">
-            <input type='text' class="form-control"
+        <div className="input-group mb-3">
+            <input type='text' className="form-control"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 ref={inputRef}
                 autoFocus
                 onKeyDown={handleKeyPress}
             />
-            <button class="btn btn-success"
+            <button className="btn btn-success"
                 onClick={addHandle}>add</button>
         </div>
     )
