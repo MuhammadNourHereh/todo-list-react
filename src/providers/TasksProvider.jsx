@@ -5,12 +5,12 @@ const TasksContext = createContext(undefined);
 
 const TasksProvider = ({ children }) => {
   
-  const [tasks, setTasks] = useState([new TaskModel('task 1'), new TaskModel('task 2'), new TaskModel('task 3')]);
+  // const [tasks, setTasks] = useState([new TaskModel('task 1'), new TaskModel('task 2'), new TaskModel('task 3')]);
   // Load tasks from localStorage on initial render
-  // const [tasks, setTasks] = useState(() => {
-  //   const savedTasks = localStorage.getItem('tasks')
-  //   return savedTasks ? JSON.parse(savedTasks) : []
-  // })
+  const [tasks, setTasks] = useState(() => {
+    const savedTasks = localStorage.getItem('tasks')
+    return savedTasks ? JSON.parse(savedTasks) : [new TaskModel('task 1'), new TaskModel('task 2'), new TaskModel('task 3')]
+  })
 
   // // Save tasks to localStorage whenever they change
   // useEffect(() => {

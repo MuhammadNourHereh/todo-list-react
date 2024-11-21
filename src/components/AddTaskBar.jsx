@@ -1,7 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
+import { TasksContext } from '../providers/TasksProvider';
 
-const AddTaskBar = ({ addTask }) => {
+const AddTaskBar = () => {
     const [inputValue, setInputValue] = useState('');
+    const { addTask } = useContext(TasksContext)
     const inputRef = useRef(null);
 
 
