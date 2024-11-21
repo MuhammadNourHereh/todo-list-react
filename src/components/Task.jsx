@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { TasksContext } from '../context/TasksContext'
 
-const Task = (content) => {
+
+const Task = ({children, index}) => {
+  const {delTask} = useContext(TasksContext)
   return (
-    <div>{content.children}</div>
+    <div>
+      {children + '\ '  }
+      <button onClick={() => delTask(index)}>del</button>
+    </div>
   )
 }
 
