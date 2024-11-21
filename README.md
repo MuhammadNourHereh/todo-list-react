@@ -3,10 +3,10 @@
 
 ## features
 * add Tasks
+* delete Tasks
 
 ## up coming features
 
 * delete Tasks
 * check Tasks
-* delete Tasks
 * styling
