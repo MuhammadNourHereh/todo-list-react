@@ -8,7 +8,7 @@ const TasksList = () => {
   return (
     <div>
       {tasks.map((task, index) => (
-        <Task key={index} index={index}>{task}</Task>
+        <Task key={index} index={index} checked={task.checked} >{task.content}</Task>
       ))}
     </div>
   )
