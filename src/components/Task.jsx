@@ -10,19 +10,27 @@ const Task = ({ children, index, checked }) => {
     );
     setTasks(updatedTasks)
   }
+
+  const handleDelete = (e) => {
+    // Stop the click event from bubbling up to the parent li
+    e.stopPropagation();
+    delTask(index);
+  }
   return (
-    <div>
-      <span
-        className={`${checked ? 'checked' : 'unchecked'} flex-grow`}
-      >
-        {children + ' '}
-      </span>
-      <input type='checkbox'
-        checked={checked}
-        onChange={handleCheckboxChange}
-      />
-      <button onClick={() => delTask(index)}>del</button>
-    </div>
+    <li className="list-group-item list-group-item-action"
+      onClick={handleCheckboxChange}
+    ><div className='task-list-item'>
+        <span
+          className={`${checked ? 'checked' : 'unchecked'} flex-grow`}
+        >
+          {children + ' '}
+        </span>
+        <button onClick={handleDelete}
+          className="btn btn-sm btn-danger">
+          <i className="bi bi-trash"></i>
+        </button>
+      </div>
+    </li>
   )
 }
 

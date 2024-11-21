@@ -25,8 +25,8 @@ const App = () => {
 
   return (
     <TasksContext.Provider value={{ tasks, setTasks, delTask }}>
-      <div>
-        <h1>Todo List:</h1>
+      <div className='app'>
+        <h1>Todo List 📝</h1>
         <AddTaskBar addTask={addTask} />
         <TasksList tasks={tasks} />
       </div>

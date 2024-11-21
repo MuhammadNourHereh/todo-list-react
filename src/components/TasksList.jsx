@@ -3,14 +3,14 @@ import Task from './Task'
 import { TasksContext } from '../context/TasksContext'
 
 const TasksList = () => {
-  const {tasks} = useContext(TasksContext)
+  const { tasks } = useContext(TasksContext)
 
   return (
-    <div>
+    <ul className="list-group">
       {tasks.map((task, index) => (
         <Task key={index} index={index} checked={task.checked} >{task.content}</Task>
       ))}
-    </div>
+    </ul>
   )
 }
 

@@ -3,12 +3,13 @@ import React, { useState } from 'react'
 const AddTaskBar = ({ addTask }) => {
     const [inputValue, setInputValue] = useState('');
     return (
-        <div>
-            <input type='text'
+        <div class="input-group mb-3">
+            <input type='text' class="form-control"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
             />
-            <button onClick={() => {
+            <button class="btn btn-success"
+            onClick={() => {
                 addTask(inputValue);
             }}>add</button>
         </div>
