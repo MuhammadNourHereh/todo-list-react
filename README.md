@@ -10,5 +10,5 @@
 
 ## up coming features
 * drag Task to rearrange
-
+* edit Tasks
 

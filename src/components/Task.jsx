@@ -21,9 +21,9 @@ const Task = ({ children, index, checked }) => {
       onClick={handleCheckboxChange}
     ><div className='task-list-item'>
         <span
-          className={`${checked ? 'checked' : 'unchecked'} flex-grow`}
+          className={`${checked ? 'checked' : 'unchecked'}`}
         >
-          {children + ' '}
+          {children}
         </span>
         <button onClick={handleDelete}
           className="btn btn-sm btn-danger">

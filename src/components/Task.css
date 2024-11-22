@@ -12,4 +12,14 @@
   display: flex;
   justify-content: space-between;
   font-family: 'Shadows Into Light';
+  width: 100%;
+  gap: 8px; /* adds space between the text and delete button */
+}
+
+span {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  flex: 1; /* allows the span to shrink */
+  min-width: 0; /* crucial for text wrapping in flexbox */
 }
