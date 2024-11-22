@@ -20,6 +20,17 @@ span {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
-  flex: 1; /* allows the span to shrink */
   min-width: 0; /* crucial for text wrapping in flexbox */
+}
+
+form {
+  font-family: 'Shadows Into Light';
+  flex: 1;
+  min-width: 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex: 0;
 }
