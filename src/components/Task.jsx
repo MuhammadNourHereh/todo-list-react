@@ -34,8 +34,14 @@ const Task = ({ children, index, checked }) => {
     setIsEditing(true)
   }
 
+  const handleDoubleClick = (e) => {
+    e.stopPropagation()
+    setIsEditing(true)
+  }
+  
   const readingMode =
-    <span className={`${checked ? 'checked' : 'unchecked'}`}>
+    <span onDoubleClick={handleDoubleClick}
+      className={`${checked ? 'checked' : 'unchecked'}`}>
       {children}
     </span>
 
@@ -56,7 +62,7 @@ const Task = ({ children, index, checked }) => {
       onClick={handleCheckboxChange}
     ><div className='task-list-item'>
         {isEditing ? editingMode : readingMode}
-        <div className='buttons'> 
+        <div className='buttons'>
           <button onClick={enterEditMode}
             className="btn btn-sm btn-secondary">
             <i className="bi bi-pen"></i>
